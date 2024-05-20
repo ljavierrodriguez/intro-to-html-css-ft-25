@@ -1,0 +1,114 @@
+/* 
+Sintaxis:
+
+selector {
+    propiedad: valor;
+}
+
+*/
+
+/* Selector de ID */
+#titulo {
+    color: red;
+}
+
+/* Selector de Clase */
+.titulo {
+    color: green;
+}
+
+/* Selector de Elemento o Tipo */
+h1 {
+    color: blue;
+}
+
+/* Selector Descendiente */
+div p {
+    text-align: center;
+}
+
+/* Selector Hijo */
+div > p {
+    text-align: right;
+}
+
+#home > .header {
+    color: red;
+}
+
+/* Selector Adyacente */
+section h3 + p {
+    text-align: center;
+    color: red;
+}
+
+/* Selector Hermano */
+section > h2 ~ p {
+    color: blue;
+}
+
+
+/* Selector de Atributo  */
+
+a[class]{ /* que el atributo class este presente */
+    color: green;
+}
+
+a[class=link1]{ /* Que el valor de class sea link1 */
+    color: red;
+}
+
+a[class*=link2]{ /* Que el valor contenga link2 (mylink2 link2 link2abc) */
+    color: blue;
+}
+
+a[class^=link]{ /* Que el valor comience con link */
+    color: blueviolet;
+}
+
+a[href$=".png"]{ /* Que el valor termine con .png */
+    color: yellow;
+}
+
+a[class~=link4]{ /* Que alguno de sus clases asignadas sea link4 */
+    font-size: 20px;
+}
+
+/* Selector de Pseudoclase */
+
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+a:visited {
+    color: green;
+}
+
+.only-print {
+    display: none;
+}
+
+
+@media screen and (max-width: 500px){
+    body {
+        background-color: green;
+    }
+}  
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+    body {
+        background-color: gray;
+    }
+}  
+
+@media print {
+    .only-print {
+        display: block;
+    }
+}
+
+/* .fa-circle-user {
+    font-size: 60px;
+    color: blue;    
+} */
